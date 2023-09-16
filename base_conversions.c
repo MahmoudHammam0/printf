@@ -8,14 +8,15 @@ int dec_to_bin(va_list args)
 {
 	unsigned int x = va_arg(args, unsigned int);
 	char *arr;
-	int t = 0, v;
+	int t = 0, v, m, i, u;
 	int r = x;
+	char h;
 
 	if (x == 0)
 		return (_putchar('0'));
 	if (x < 1)
 		return (-1);
-	for (v = 0, r > 0, i++)
+	for (v = 0; r > 0; i++)
 	{
 		r /= 2;
 	}
@@ -32,18 +33,15 @@ int dec_to_bin(va_list args)
 		t++;
 	}
 	arr[t] = '\0';
-	int m = t / 2;
-	char h;
-
-	for (int i = 0; i < m; i++)
+	m = t / 2;
+	for (i = 0; i < m; i++)
 	{
 		h = arr[i];
 		arr[i] = arr[t - i - 1];
 		arr[t - i - 1] = h;
 	}
 	write(1, arr, strlen(arr));
-	int u = strlen(arr);
-
+	u = strlen(arr);
 	free(arr);
 	return (u);
 }

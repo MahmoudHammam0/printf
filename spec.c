@@ -28,7 +28,7 @@ int print_str(va_list args)
  * @args: argumnets lists
  * Return: 1
  */
-int print_per(va_list args__attribute__((unused)))
+int print_per(__attribute__((unused))va_list args)
 {
 	char c = '%';
 
