@@ -50,7 +50,7 @@ int print_num(va_list args)
 
 /**
  * print_unsigned - prints unsigned int
- * @arg: list of arguments
+ * @args: list of arguments
  *
  * Return: length of the number
  */
