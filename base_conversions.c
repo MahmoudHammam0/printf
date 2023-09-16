@@ -39,7 +39,8 @@ int dec_to_bin(va_list args)
 		arr[i] = arr[t - i - 1];
 		arr[t - i - 1] = h;
 	}
-	write(1, arr, strlen(arr));
+	for (i = 0; arr[i] != '\0'; i++)
+		_putchar(arr[i]);
 	free(arr);
 	return (v);
 }
