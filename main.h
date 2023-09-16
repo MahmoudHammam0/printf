@@ -34,5 +34,7 @@ int print_unsigned(va_list arg);
 char *string_to_upper(char *s);
 int octal(int n, int l);
 int print_octal(va_list args);
+char *str_rev(char *s);
+int print_rev(va_list args);
 
 #endif
