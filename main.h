@@ -32,5 +32,7 @@ int print_hex(va_list args);
 int print_upperhex(va_list args);
 int print_unsigned(va_list arg);
 char *string_to_upper(char *s);
+int octal(int n, int l);
+int print_octal(va_list args);
 
 #endif
