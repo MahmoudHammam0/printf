@@ -82,3 +82,17 @@ int print_upperhex(va_list args)
 
 	return (len);
 }
+
+/**
+ * print_octal - prints a number in octal
+ * @args: argument list
+ *
+ * Return: length of the number
+ */
+int print_octal(va_list args)
+{
+	int n = va_arg(args, int);
+	int l = octal(n, 0);
+
+	return (l);
+}
