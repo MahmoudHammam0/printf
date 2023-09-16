@@ -54,7 +54,7 @@ int print_num(va_list args)
  *
  * Return: length of the number
  */
-int print_unsigned(va_list arg)
+int print_unsigned(va_list args)
 {
 	unsigned int b = va_arg(args, int);
 	int l = print_number(b, 0);

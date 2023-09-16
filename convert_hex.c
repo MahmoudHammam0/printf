@@ -10,7 +10,7 @@ char *dec_to_hex(int n)
 {
 	char dig[] = "0123456789abcdef";
 	char hex[1000];
-
+	char *str;
 	int len = 0, i, j = 0, num = n;
 
 	while (num > 0)
@@ -22,7 +22,7 @@ char *dec_to_hex(int n)
 		num = num / 16;
 	}
 
-	char *str = malloc(len + 1);
+	str = malloc(len + 1);
 
 	if (str == NULL)
 	{

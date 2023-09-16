@@ -8,16 +8,16 @@
  */
 int format_str(const char *format, fmt spec[], va_list args)
 {
-	int i, j, n, sum = 0;
+	int j, n, sum = 0;
 	const char *f = format;
 
-	for (i = 0; f[i] != '\0'; i++)
+	for ( ; *f; f++)
 	{
-		if (f[i] == '%')
+		if (*f == '%')
 		{
 			for (j = 0; spec[j].c != '\0'; j++)
 			{
-				if (f[i + 1] == spec[j].c)
+				if (*f == spec[j].c)
 				{
 					n = spec[j].f(args);
 					if (n == -1)
@@ -26,7 +26,6 @@ int format_str(const char *format, fmt spec[], va_list args)
 					break;
 				}
 			}
-			i++;
 		}
 		else
 		{
