@@ -8,17 +8,16 @@
  */
 int format_str(const char *format, fmt spec[], va_list args)
 {
-	int j, n, sum = 0;
+	int i, j, n, sum = 0;
 	const char *f = format;
 
-	for ( ; *f; f++)
+	for (i = 0; f[i] != '\0'; i++)
 	{
-		if (*f == '%')
+		if (f[i] == '%')
 		{
-			f++;
 			for (j = 0; spec[j].c != '\0'; j++)
 			{
-				if (*f == spec[j].c)
+				if (f[i + 1] == spec[j].c)
 				{
 					n = spec[j].f(args);
 					if (n == -1)
@@ -27,10 +26,22 @@ int format_str(const char *format, fmt spec[], va_list args)
 					break;
 				}
 			}
+			if (spec[j].c == '\0' && f[i + 1] != ' ')
+			{
+				if (f[i + 1] != '\0')
+				{
+					_putchar(f[i]);
+					_putchar(f[i + 1]);
+					sum += 2;
+				}
+				else
+					return (-1);
+			}
+			i++;
 		}
 		else
 		{
-			write(1, f, 1);
+			_putchar(f[i]);
 			sum++;
 		}
 	}
