@@ -14,8 +14,8 @@
  */
 typedef struct formatter
 {
-        char c;
-        int (*f)(va_list);
+	char c;
+	int (*f)(va_list);
 } fmt;
 
 int _printf(const char *format, ...);
@@ -27,8 +27,9 @@ int print_num(va_list args);
 int print_number(int n, int l);
 int _putchar(char c);
 int format_str(const char *format, fmt spec[], va_list args);
-char* dec_to_hex(int n);
+char *dec_to_hex(int n);
 int print_hex(va_list args);
 int print_upperhex(va_list args);
+int print_unsigned(va_list arg);
 
 #endif
