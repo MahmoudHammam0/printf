@@ -16,7 +16,7 @@ int dec_to_bin(va_list args)
 		return (_putchar('0'));
 	if (x < 1)
 		return (-1);
-	for (v = 0; r > 0; i++)
+	for (v = 0; r > 0; v++)
 	{
 		r /= 2;
 	}
