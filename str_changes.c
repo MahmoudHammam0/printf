@@ -41,7 +41,7 @@ int print_rot13(va_list args)
 		'Z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
 		'M'};
 	char *str = va_arg(args, char *);
-	int i, j;
+	int i, j, len;
 
 	if (str == NULL)
 		return (-1);
@@ -58,5 +58,6 @@ int print_rot13(va_list args)
 		if (j == 53)
 			_putchar(str[i]);
 	}
-	return (i);
+	len = strlen(str);
+	return (len);
 }
