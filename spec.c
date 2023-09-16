@@ -20,6 +20,8 @@ int print_str(va_list args)
 {
 	int i = 0;
 	char *s = va_arg(args, char *);
+	if (s == NULL)
+		s = "(null)";
 
 	write(1, s, strlen(s));
 	while (s[i] != '\0')
