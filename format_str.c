@@ -15,6 +15,7 @@ int format_str(const char *format, fmt spec[], va_list args)
 	{
 		if (*f == '%')
 		{
+			f++;
 			for (j = 0; spec[j].c != '\0'; j++)
 			{
 				if (*f == spec[j].c)
