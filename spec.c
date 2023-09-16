@@ -47,3 +47,17 @@ int print_num(va_list args)
 
 	return (v);
 }
+
+/**
+ * print_unsigned - prints unsigned int
+ * @arg: list of arguments
+ *
+ * Return: length of the number
+ */
+int print_unsigned(va_list arg)
+{
+	unsigned int b = va_arg(args, int);
+	int l = print_number(b, 0);
+
+	return (l);
+}
