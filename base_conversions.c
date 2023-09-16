@@ -45,3 +45,41 @@ int dec_to_bin(va_list args)
 	free(arr);
 	return (u);
 }
+
+/**
+ * print_hex - print a number in hexadecimal in lower case
+ * @args: argument list
+ *
+ * Return: length of the number
+ */
+int print_hex(va_list args)
+{
+	int num = va_arg(args, int);
+	char *p = dec_to_hex(num);
+	int len = strlen(p);
+
+	write(1, p, len);
+
+	free(p);
+	return (len);
+}
+
+/**
+ * print_upperhex - print a number in hexadecimal in upper case
+ * @args: argument list
+ *
+ * Return: length of the number
+ */
+int print_upperhex(va_list args)
+{
+	int num = va_arg(args, int);
+	char *p = dec_to_hex(num);
+	int len = strlen(p);
+	char *u = string_to_upper(p);
+
+	write(1, u, len);
+
+	free(p);
+
+	return (len);
+}
