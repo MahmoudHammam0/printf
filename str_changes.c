@@ -55,8 +55,8 @@ int print_rot13(va_list args)
 				break;
 			}
 		}
+		if (j == 53)
+			_putchar(str[i]);
 	}
-	if (j == 53)
-		_putchar(str[i]);
 	return (i);
 }
