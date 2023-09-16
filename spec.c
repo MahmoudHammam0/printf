@@ -18,10 +18,13 @@ int print_char(va_list args)
  */
 int print_str(va_list args)
 {
+	int i;
 	char *s = va_arg(args, char *);
 
 	write(1, s, strlen(s));
-	return (strlen(s));
+	for (i = 0; s[i] != '\0'; i++)
+		;
+	return (i);
 }
 /**
  * print_per - print % in case of %%

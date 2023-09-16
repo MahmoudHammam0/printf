@@ -8,7 +8,7 @@ int dec_to_bin(va_list args)
 {
 	unsigned int x = va_arg(args, unsigned int);
 	char *arr;
-	int t = 0, v, m, i, u;
+	int t = 0, v, m, i;
 	int r = x;
 	char h;
 
@@ -41,9 +41,8 @@ int dec_to_bin(va_list args)
 		arr[t - i - 1] = h;
 	}
 	write(1, arr, strlen(arr));
-	u = strlen(arr);
 	free(arr);
-	return (u);
+	return (v);
 }
 
 /**

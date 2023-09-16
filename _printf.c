@@ -25,5 +25,5 @@ int _printf(const char *format, ...)
 		return (-1);
 	n = format_str(format, spec, args);
 	va_end(args);
-	return (n);
+	return (n - 1);
 }
