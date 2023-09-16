@@ -33,10 +33,12 @@ int dec_to_bin(va_list args)
 	}
 	arr[t] = '\0';
 	s = str_rev(arr);
+	if (s == NULL)
+		return (-1);
 	for (i = 0; s[i] != '\0'; i++)
 		_putchar(s[i]);
-	free(s);
 	free(arr);
+	free(s);
 	return (v);
 }
 
