@@ -8,8 +8,7 @@ int dec_to_bin(va_list args)
 {
 	unsigned int x = va_arg(args, unsigned int);
 	char *arr;
-	int t = 0, v, m, i;
-	int r = x;
+	int t = 0, v, m, i, r = x;
 	char h;
 
 	if (x == 0)
