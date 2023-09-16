@@ -31,8 +31,8 @@ int format_str(const char *format, fmt spec[], va_list args)
 		else
 		{
 			write(1, f, 1);
-			n++;
+			sum++;
 		}
 	}
-	return (n);
+	return (sum);
 }

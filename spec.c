@@ -18,12 +18,12 @@ int print_char(va_list args)
  */
 int print_str(va_list args)
 {
-	int i;
+	int i = 0;
 	char *s = va_arg(args, char *);
 
 	write(1, s, strlen(s));
-	for (i = 0; s[i] != '\0'; i++)
-		;
+	while (s[i] != '\0')
+		i++;
 	return (i);
 }
 /**
