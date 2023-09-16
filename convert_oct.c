@@ -9,13 +9,12 @@
  */
 int octal(int n, int l)
 {
+	int a, mod;
+
 	if (n == 0)
 	{
 		return (l);
 	}
-
-	int a, mod;
-
 	if (n > 0)
 	{
 		a = n / 8;
