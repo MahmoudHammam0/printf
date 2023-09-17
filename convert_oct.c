@@ -7,7 +7,7 @@
  *
  * Return: length of the number
  */
-int octal(int n, int l)
+int octal(int n, int i)
 {
 	int octalNum[100];
 
