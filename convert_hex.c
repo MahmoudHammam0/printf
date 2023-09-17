@@ -13,6 +13,17 @@ char *dec_to_hex(int n)
 	char *str;
 	int len = 0, i, j = 0, num = n;
 
+	if (num == 0)
+	{
+		str = malloc(2);
+
+		if (str == NULL)
+			return (NULL);
+		str[0] = '0';
+		str[1] = '\0';
+		return (str);
+	}
+
 	while (num > 0)
 	{
 		int mod = num % 16;
