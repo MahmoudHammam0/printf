@@ -62,7 +62,7 @@ int print_num(va_list args)
  */
 int print_unsigned(va_list args)
 {
-	unsigned int b = va_arg(args, int);
+	unsigned int b = (unsigned int)va_arg(args, int);
 	int l = print_number(b, 0);
 
 	return (l);
