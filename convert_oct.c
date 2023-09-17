@@ -9,26 +9,17 @@
  */
 int octal(int n, int l)
 {
-	int a, mod;
+	int octalNum[100];
 
-	if (n == 0)
+	while (n != 0)
 	{
-		return (l);
-	}
-	if (n > 0)
-	{
-		a = n / 8;
-		mod = n % 8;
-		l++;
-	}
-	else
-	{
-		a = (n / 8) + 1;
-		mod = n % 8 + 8;
+		octalNum[i] = n % 8;
+		n = n / 8;
+		i++;
 	}
 
-	l = octal(a, l);
+	for (int j = i - 1; j >= 0; j--)
+		print_number(octalNum[j], 0);
 
-	print_number(mod, 0);
-	return (l);
+	return (i);
 }
