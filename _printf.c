@@ -21,6 +21,7 @@ int _printf(const char *format, ...)
 		{'r', print_rev},
 		{'R', print_rot13},
 		{'o', print_octal},
+		{'S', print_nonprint},
 		{'\0', NULL}
 	};
 	va_start(args, format);

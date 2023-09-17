@@ -61,3 +61,70 @@ int print_rot13(va_list args)
 	len = strlen(str);
 	return (len);
 }
+
+/**
+ * print_newhex - print a number in hexadecimal in upper case
+ * @num: number to convert
+ *
+ * Return: length of the number
+ */
+int print_newhex(int num)
+{
+	char *p = dec_to_hex(num);
+	int len = strlen(p);
+
+	p = string_to_upper(p);
+
+	write(1, p, len);
+
+	free(p);
+
+	return (len);
+}
+
+/**
+ * print_nonprint - prints non printable chracters in hexadecimal
+ * @args: argument list
+ *
+ * Return: length of the number
+ */
+int print_nonprint(va_list args)
+{
+	int i = 0, l = 0;
+	char *str = va_arg(args, char *);
+	char *s;
+	char c;
+
+	if (str == NULL)
+	{
+		s = "null";
+		l += write(1, s, strlen(s));
+
+		return (l);
+	}
+	else
+	{
+		while (str[i] != '\0')
+		{
+			if (str[i] < 32 || str[i] >= 127)
+			{
+				s = "\\x";
+				l += write(1, s, strlen(s))
+
+				if (str[i] < 16)
+				{
+					_putchar('0');
+					l++;
+				}
+				l += print_newhex(str[i]);
+			}
+			else
+			{
+				c = str[i];
+				l += write(1, &c, 1);
+			}
+			i++;
+		}
+	}
+	return (l);
+}
