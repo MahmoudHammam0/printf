@@ -37,7 +37,7 @@ int print_octal(va_list args);
 char *str_rev(char *s);
 int print_rev(va_list args);
 int print_rot13(va_list args);
-int print_nonprint(va_list args);
 int print_newhex(int num);
+int print_nonprint(va_list args);
 
 #endif
