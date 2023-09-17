@@ -9,7 +9,7 @@ int print_add(va_list args)
 	int count = 0, i, j, x;
 	void *ptr;
 	unsigned long int n;
-	char *f = "(null)";
+	char *f = "(nil)";
 	char arr[100];
 
 	ptr = va_arg(args, void *);
@@ -19,8 +19,8 @@ int print_add(va_list args)
 		{
 			_putchar(f[j]);
 		}
-		count += 6;
-		return (0);
+		count += 5;
+		return (-1);
 	}
 	n = (unsigned long int)ptr;
 	_putchar('0');
