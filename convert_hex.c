@@ -24,7 +24,7 @@ char *dec_to_hex(int n)
 		return (str);
 	}
 
-	while (num > 0)
+	while (num / 16 != 0)
 	{
 		int mod = num % 16;
 
