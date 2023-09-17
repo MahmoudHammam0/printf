@@ -18,6 +18,7 @@ int _printf(const char *format, ...)
 		{'x', print_hex},
 		{'X', print_upperhex},
 		{'u', print_unsigned},
+		{'p', print_add},
 		{'r', print_rev},
 		{'R', print_rot13},
 		{'o', print_octal},
