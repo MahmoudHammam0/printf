@@ -96,7 +96,7 @@ int print_octal(va_list args)
 	if (n == 0)
 		_putchar('0');
 	else
-		int l = octal(n, 0);
+		l = octal(n, 0);
 
 	return (l);
 }
