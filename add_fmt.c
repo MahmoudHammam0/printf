@@ -20,7 +20,7 @@ int print_add(va_list args)
 			_putchar(f[j]);
 		}
 		count += 6;
-		return (-1);
+		return (0);
 	}
 	n = (unsigned long int)ptr;
 	_putchar('0');
