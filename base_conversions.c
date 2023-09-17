@@ -72,9 +72,9 @@ int print_upperhex(va_list args)
 	int num = va_arg(args, int);
 	char *p = dec_to_hex(num);
 	int len = strlen(p);
-	char *u = string_to_upper(p);
+	p = string_to_upper(p);
 
-	write(1, u, len);
+	write(1, p, len);
 
 	free(p);
 
