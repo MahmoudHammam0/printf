@@ -6,14 +6,22 @@
  */
 int print_add(va_list args)
 {
-	int count = 0, i, x;
+	int count = 0, i, j, x;
 	void *ptr;
 	unsigned long int n;
+	char *f = "(null)";
 	char arr[100];
 
 	ptr = va_arg(args, void *);
 	if (ptr == NULL)
+	{
+		for (j = 0; f[j] != '\0'; j++)
+		{
+			_putchar(f[j]);
+		}
+		count += 6;
 		return (-1);
+	}
 	n = (unsigned long int)ptr;
 	_putchar('0');
 	count++;
