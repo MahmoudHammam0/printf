@@ -19,7 +19,7 @@ int print_add(va_list args)
 		{
 			_putchar(f[j]);
 		}
-		return (6);
+		return (5);
 	}
 	n = (unsigned long int)ptr;
 	_putchar('0');
