@@ -109,7 +109,7 @@ int print_nonprint(va_list args)
 			if (str[i] < 32 || str[i] >= 127)
 			{
 				s = "\\x";
-				l += write(1, s, strlen(s))
+				l += write(1, s, strlen(s));
 
 				if (str[i] < 16)
 				{
