@@ -36,10 +36,7 @@ char *dec_to_hex(int n)
 	str = malloc(len + 1);
 
 	if (str == NULL)
-	{
-		free(str);
 		return (NULL);
-	}
 
 	for (i = len - 1; i >= 0; i--)
 		str[j++] = hex[i];
