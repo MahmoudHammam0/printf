@@ -9,7 +9,7 @@ int dec_to_bin(va_list args)
 	unsigned int x = va_arg(args, unsigned int);
 	char *arr;
 	char *s;
-	int t = 0, v; 
+	int t = 0, v;
 	unsigned int r = x, i;
 
 	if (x == 0)
@@ -89,8 +89,13 @@ int print_upperhex(va_list args)
  */
 int print_octal(va_list args)
 {
+	int l = 0;
 	int n = va_arg(args, int);
-	int l = octal(n, 0);
+
+	if (n == 0)
+		_putchar('0');
+	else
+		int l = octal(n, 0);
 
 	return (l);
 }
