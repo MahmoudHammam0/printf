@@ -19,7 +19,6 @@ int print_add(va_list args)
 		{
 			_putchar(f[j]);
 		}
-		count += 5;
 		return (-1);
 	}
 	n = (unsigned long int)ptr;
