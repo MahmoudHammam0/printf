@@ -7,19 +7,19 @@
  *
  * Return: length of the number
  */
-int octal(int n, int i)
+int octal(int n, int l)
 {
-	int octalNum[100];
+	int oct[100], i;
 
 	while (n != 0)
 	{
-		octalNum[i] = n % 8;
+		oct[l] = n % 8;
 		n = n / 8;
-		i++;
+		l++;
 	}
 
-	for (int j = i - 1; j >= 0; j--)
-		print_number(octalNum[j], 0);
+	for (i = l - 1; i >= 0; i--)
+		print_number(oct[i], 0);
 
-	return (i);
+	return (l);
 }
