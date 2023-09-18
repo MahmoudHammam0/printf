@@ -63,10 +63,18 @@ int print_num(va_list args)
 int print_unsigned(va_list args)
 {
 	unsigned int b = va_arg(args, unsigned int);
+	int x;
 
 	if (b < 1)
-		return (-1);
-	if (b == 0)
-		return (print_unsig(b));
-	return (print_unsig(b));
+	{
+		if (b == 0)
+		{
+			x = print_unsig(b);
+			return (x);
+		}
+		else
+			return (-1);
+	}
+	x = print_unsig(b);
+	return (x);
 }
