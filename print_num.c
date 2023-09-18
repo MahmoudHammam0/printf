@@ -31,8 +31,10 @@ int print_unsig(unsigned int n)
 	int d = 1, v = 1, i;
 	int count = 0;
 	char *s;
+	unsigned int num;
 
-	while (n / d > 9)
+	num = n;
+	while (num / d > 9)
 	{
 		v++;
 		d *= 10;
@@ -42,14 +44,14 @@ int print_unsig(unsigned int n)
 		return (-1);
 	for (i = 0; i < v; i++)
 	{
-		s[i] = (n / d) + 48;
+		s[i] = (num / d) + 48;
 		count++;
-		n %= d;
+		num %= d;
 		d /= 10;
-
 	}
 	s[i] = '\0';
-	write(1, s, v);
+	for (i = 0; s[i] != '\0'; i++)
+		_putchar(s[i]);
 	free(s);
 	return (count);
 }
