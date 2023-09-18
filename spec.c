@@ -62,7 +62,7 @@ int print_num(va_list args)
  */
 int print_unsigned(va_list args)
 {
-	unsigned int b = (unsigned int)va_arg(args, unsigned int);
+	unsigned int b = va_arg(args, unsigned int);
 	int x;
 
 	if (b < 1)
