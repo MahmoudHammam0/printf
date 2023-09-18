@@ -51,12 +51,18 @@ int dec_to_bin(va_list args)
  */
 int print_hex(va_list args)
 {
-	unsigned int num = va_arg(args, unsigned int);
-	char *p = dec_to_hex(num);
-	int len = strlen(p);
+	unsigned int num;
+	char *p;
+	int len;
 
+	num = va_arg(args, unsigned int);
+	if (num == 0)
+		return (_putchar('0'));
+	if (num < 1)
+		return (-1);
+	p = dec_to_hex(num);
+	len = strlen(p);
 	write(1, p, len);
-
 	free(p);
 	return (len);
 }
@@ -69,16 +75,19 @@ int print_hex(va_list args)
  */
 int print_upperhex(va_list args)
 {
-	int num = va_arg(args, int);
-	char *p = dec_to_hex(num);
-	int len = strlen(p);
+	unsigned int num = va_arg(args, unsigned int);
+	char *p;
+	int len;
 
+	if (num == 0)
+		return (_putchar('0'));
+	if (num < 1)
+		return (-1);
+	p = dec_to_hex(num);
+	len = strlen(p);
 	p = string_to_upper(p);
-
 	write(1, p, len);
-
 	free(p);
-
 	return (len);
 }
 
@@ -91,12 +100,12 @@ int print_upperhex(va_list args)
 int print_octal(va_list args)
 {
 	int l = 0;
-	int n = va_arg(args, unsigned int);
+	unsigned int n = va_arg(args, unsigned int);
 
 	if (n == 0)
-		_putchar('0');
-	else
-		l = octal(n, 0);
-
+		return (_putchar('0'));
+	if (n < 1)
+		return (-1);
+	l = octal(n, 0);
 	return (l);
 }
