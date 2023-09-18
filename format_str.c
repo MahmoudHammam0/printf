@@ -17,6 +17,8 @@ int format_str(const char *format, fmt spec[], va_list args)
 		{
 			f++;
 			n = format_str2(f, spec, args);
+			if (n == -1)
+				return (-1);
 			sum += n;
 		}
 		else
