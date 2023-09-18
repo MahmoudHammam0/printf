@@ -31,6 +31,7 @@ char *dec_to_hex(unsigned int n);
 int print_hex(va_list args);
 int print_upperhex(va_list args);
 int print_unsigned(va_list arg);
+int print_unsig(unsigned int n);
 char *string_to_upper(char *s);
 int octal(unsigned int n, int l);
 int print_octal(va_list args);
