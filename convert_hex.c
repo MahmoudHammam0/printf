@@ -6,12 +6,13 @@
  *
  * Return: number in hexadecimal as a string
  */
-char *dec_to_hex(int n)
+char *dec_to_hex(unsigned int n)
 {
 	char dig[] = "0123456789abcdef";
 	char hex[1000];
 	char *str;
-	int len = 0, i, j = 0, num = n;
+	int len = 0, i, j = 0;
+	unsigned int num = n;
 
 	if (num == 0)
 	{

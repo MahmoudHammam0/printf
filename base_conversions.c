@@ -51,7 +51,7 @@ int dec_to_bin(va_list args)
  */
 int print_hex(va_list args)
 {
-	int num = va_arg(args, int);
+	unsigned int num = va_arg(args, unsigned int);
 	char *p = dec_to_hex(num);
 	int len = strlen(p);
 
