@@ -91,7 +91,7 @@ int print_upperhex(va_list args)
 int print_octal(va_list args)
 {
 	int l = 0;
-	int n = va_arg(args, int);
+	int n = va_arg(args, unsigned int);
 
 	if (n == 0)
 		_putchar('0');
