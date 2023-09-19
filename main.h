@@ -42,13 +42,4 @@ int print_rot13(va_list args);
 int print_newhex(int num);
 int print_nonprint(va_list args);
 int print_add(va_list args);
-
-int handle_flags(va_list args);
-int handle_plus(va_list args);
-int print_minus(va_list args);
-int handle_width(va_list args);
-int handle_hash(va_list args);
-int handle_float(va_list args);
-int handle_h(va_list args);
-int handle_l(va_list args);
 #endif
