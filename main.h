@@ -45,4 +45,5 @@ int print_add(va_list args);
 
 int handle_flags(va_list args);
 int handle_plus(va_list args);
+int print_minus(va_list args);
 #endif
