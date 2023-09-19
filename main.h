@@ -49,4 +49,5 @@ int print_minus(va_list args);
 int handle_width(va_list args);
 int handle_hash(va_list args);
 int handle_float(va_list args);
+int handle_h(va_list args);
 #endif
